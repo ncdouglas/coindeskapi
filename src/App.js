@@ -3,11 +3,7 @@ import { Dimmer, Loader, Select, Card } from 'semantic-ui-react';
 import Chart from 'react-apexcharts';
 import './App.css';
 
-const options = [
-  {value: 'USD', tect: 'USD'}, 
-  {value: 'EUR', text: 'EUR'}, 
-  {value: 'GBP', text: 'GBP'}
-];
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -15,6 +11,12 @@ function App() {
   const [currency, setCurrency] = useState('USD');
   const [chartData, setChartData] = useState(null);
   const [series, setSeries] = useState(null);
+
+  const options = [
+    {value: 'USD', text: 'USD'}, 
+    {value: 'EUR', text: 'EUR'}, 
+    {value: 'GBP', text: 'GBP'}
+  ];
 
   useEffect(() => {
     async function fetchData() {
@@ -84,7 +86,7 @@ function App() {
               <div className='price'>
                 <Card>
                   <Card.Content>
-                    <Card.header>{currency} Currency</Card.header>
+                    <Card.Header>{currency} Currency</Card.Header>
                     <Card.Description>{priceData[currency].rate}</Card.Description>
                   </Card.Content>
                 </Card>
