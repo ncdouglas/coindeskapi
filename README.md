@@ -1,6 +1,6 @@
 # coindesk API 
 
-A simple speach recognition app.
+A simple app to track the current price of various currencies.
 
 Built using coindesk-api and based off the following tutorial: https://www.youtube.com/watch?v=Xqg-3bQ8qjE by Jason Rivera. 
 
